@@ -77,8 +77,10 @@ export default function Header() {
               ))}
             </div>
             <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-              <a href="#" className="text-sm/6 font-semibold text-white">
-                Log in <span aria-hidden="true">&rarr;</span>
+              <a href="#" className={`text-sm/6 font-bold rounded-md border-2 px-6 py-2 transition duration-300  ${
+                  isScrolled ? 'text-primary  border-primary hover:bg-primary hover:text-white' : 'text-white border-white hover:bg-white hover:text-primary'
+              }`}>
+                Doe de quickscan <span aria-hidden="true">&rarr;</span>
               </a>
             </div>
           </nav>
