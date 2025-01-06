@@ -4,7 +4,7 @@ import {FadeIn, FadeInStagger} from './FadeIn';
 
 export default function Hero() {
     return (
-        <div className="relative w-full h-screen bottom-20 md:bottom-10 -mb-20 md:-mb-10">
+        <div id={"hero"} className="relative w-full h-[80vh] bottom-20 md:bottom-10 -mb-20 md:-mb-10">
             {/* Background Image */}
             <img
                 className="absolute inset-0 grayscale opacity-80 object-cover w-full h-full"
@@ -27,7 +27,7 @@ export default function Hero() {
                             Wij automatiseren en digitaliseren de maakindustrie!
                         </p>
                     </FadeIn>
-                    <div className="flex gap-4 flex-col sm:flex-row text-center sm:text-left">
+                    <div className="flex gap-8 sm:gap-4 flex-col sm:flex-row text-left">
                         <FadeIn>
                             <a
                                 href="#services"

@@ -7,27 +7,27 @@ const clients = [
         Image: 'https://tailwindui.com/plus/img/logos/tuple-logo-white.svg',
     },
     {
-        name: 'test',
+        name: 'test2',
         description: 'test',
         Image: 'https://tailwindui.com/plus/img/logos/reform-logo-white.svg',
     },
     {
-        name: 'test',
+        name: 'test3',
         description: 'test',
         Image: 'https://tailwindui.com/plus/img/logos/savvycal-logo-white.svg',
     },
     {
-        name: 'test',
+        name: 'test4',
         description: 'test',
         Image: 'https://tailwindui.com/plus/img/logos/laravel-logo-white.svg',
     },
     {
-        name: 'test',
+        name: 'test5',
         description: 'test',
         Image: 'https://tailwindui.com/plus/img/logos/transistor-logo-white.svg',
     },
     {
-        name: 'test',
+        name: 'test6',
         description: 'test',
         Image: 'https://tailwindui.com/plus/img/logos/statamic-logo-white.svg',
     },
@@ -35,7 +35,7 @@ const clients = [
 
 export default function Clients() {
     return (
-        <div className="bg-primary py-24 sm:py-32 w-full">
+        <div id={"clients" } className="bg-primary py-24 sm:py-32 w-full">
             <FadeInStagger faster={true}>
                 <div className="mx-auto max-w-7xl px-6 lg:px-8 container">
                     <div className="grid grid-cols-1 items-center gap-x-8 gap-y-16 lg:grid-cols-2">
@@ -47,7 +47,7 @@ export default function Clients() {
                                 <p className="mt-6 text-lg/8 text-gray-300">
                                     Bij MKB-Totaal staan onze klanten centraal. We hebben al talloze bedrijven geholpen om hun processen te verbeteren en resultaten te behalen die ze nooit voor mogelijk hielden. Samen bouwen we aan oplossingen die passen bij jouw ambities en doelen.
                                 </p>
-                                <div className="mt-8 flex items-center gap-x-6">
+                                <div className="mt-8 flex flex-col sm:flex-row items-start sm:items-center gap-x-6 gap-y-4">
                                     <a
                                         href="#"
                                         className="rounded-md bg-transparent border border-white px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-white hover:text-primary transition duration-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
@@ -64,8 +64,8 @@ export default function Clients() {
                             className="mx-auto grid w-full max-w-xl grid-cols-2 items-center gap-y-12 sm:gap-y-14 lg:mx-0 lg:max-w-none lg:pl-8">
 
                             {clients.map((client) => (
-                                <FadeIn>
-                                    <div key={client.name} className="relative flex items-center justify-center">
+                                <FadeIn key={client.name}>
+                                    <div className="relative flex items-center justify-center">
                                         <img
                                             alt={client.name}
                                             src={client.Image}

@@ -35,7 +35,7 @@ const features = [
 
 export default function Services() {
   return (
-      <div className="relative w-full py-24">
+      <div id={"services"} className="relative w-full py-24">
         <div className="mx-auto max-w-7xl px-0 lg:px-8">
           <FadeIn>
           <div className="mx-auto max-w-2xl lg:text-center px-6 lg:px-0">
@@ -53,8 +53,8 @@ export default function Services() {
             <dl className="flex snap-x overflow-x-auto lg:overflow-y-hidden pb-4 lg:grid gap-x-8 shrink-0 w-full lg:max-w-none lg:grid-cols-2 lg:gap-y-16 pr-16 px-6 lg:px-0">
               
               {features.map((feature) => (
-                  <FadeIn>
-                  <div key={feature.name} className="relative lg:pl-16 group scroll-ml-6 snap-start shrink-0 max-w-72 lg:max-w-full">
+                  <FadeIn key={feature.name}>
+                  <div className="relative lg:pl-16 group scroll-ml-6 snap-start shrink-0 w-[65vw] lg:max-w-full">
                     <dt className="text-base/7 font-semibold text-primary-light">
 
                       <div className="relative lg:absolute left-0 top-0 mb-6 flex size-16 lg:size-10 items-center justify-center rounded-lg bg-primary group-hover:bg-primary-light">
