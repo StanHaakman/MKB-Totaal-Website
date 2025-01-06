@@ -30,8 +30,13 @@ export default {
                 ],
             },
             colors: {
-                primary: '#1E4E46', // Primaire kleur
-                'primary-light': '#3B6F62', // Lichtere variant
+                // Green
+                // primary: '#1E4E46', // Primaire kleur
+                // 'primary-light': '#3B6F62', // Lichtere variant
+                
+                // Blue
+                primary: "#264ba6",
+                'primary-light': "#4D7BCC",
             },
         },
     },
