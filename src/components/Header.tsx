@@ -35,7 +35,7 @@ export default function Header() {
   return (
       <header
           className={`w-full fixed z-40 transition-all duration-300 ${
-              isScrolled ? 'bg-white py-4 shadow-md' : 'bg-transparent py-6'
+              isScrolled ? 'bg-white py-4 shadow-md dark:bg-dark-primary' : 'bg-transparent py-6'
           }`}
       >
         <FadeIn>
@@ -78,7 +78,7 @@ export default function Header() {
             </div>
             <div className="hidden lg:flex lg:flex-1 lg:justify-end">
               <a href="#" className={`text-sm/6 font-bold rounded-md border-2 px-6 py-2 transition duration-300  ${
-                  isScrolled ? 'text-primary  border-primary hover:bg-primary hover:text-white' : 'text-white border-white hover:bg-white hover:text-primary'
+                  isScrolled ? 'text-primary dark:text-white dark:border-white  border-primary hover:bg-primary hover:text-white' : 'text-white border-white hover:bg-white hover:text-primary'
               }`}>
                 Doe de quickscan <span aria-hidden="true">&rarr;</span>
               </a>

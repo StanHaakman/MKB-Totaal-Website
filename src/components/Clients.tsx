@@ -42,12 +42,10 @@ export default function Clients() {
                         <div className="mx-auto w-full max-w-xl lg:mx-0">
                             <FadeIn>
                                 <h2 className="text-pretty text-4xl font-semibold tracking-tight text-white sm:text-5xl">
-                                    Trusted by the most innovative teams
+                                    Samen groeien naar succes
                                 </h2>
                                 <p className="mt-6 text-lg/8 text-gray-300">
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et, egestas tempus tellus
-                                    etiam sed. Quam a
-                                    scelerisque amet ullamcorper eu enim et fermentum, augue.
+                                    Bij MKB-Totaal staan onze klanten centraal. We hebben al talloze bedrijven geholpen om hun processen te verbeteren en resultaten te behalen die ze nooit voor mogelijk hielden. Samen bouwen we aan oplossingen die passen bij jouw ambities en doelen.
                                 </p>
                                 <div className="mt-8 flex items-center gap-x-6">
                                     <a
@@ -56,8 +54,8 @@ export default function Clients() {
                                     >
                                         Doe de quickscan
                                     </a>
-                                    <a href="#" className="text-sm font-semibold text-white">
-                                        Contact us <span aria-hidden="true">&rarr;</span>
+                                    <a href="#" className="text-sm font-semibold text-white group">
+                                        Of neem contact op <span className={`ml-0 group-hover:ml-2 transition-all duration-200`} aria-hidden="true">&rarr;</span>
                                     </a>
                                 </div>
                             </FadeIn>
@@ -77,49 +75,6 @@ export default function Clients() {
                                     </div>
                                 </FadeIn>
                             ))}
-
-                            {/*<img*/}
-                            {/*    alt="Tuple"*/}
-                            {/*    src="https://tailwindui.com/plus/img/logos/tuple-logo-white.svg"*/}
-                            {/*    width={105}*/}
-                            {/*    height={48}*/}
-                            {/*    className="max-h-12 w-full object-contain object-left"*/}
-                            {/*/>*/}
-                            {/*<img*/}
-                            {/*    alt="Reform"*/}
-                            {/*    src="https://tailwindui.com/plus/img/logos/reform-logo-white.svg"*/}
-                            {/*    width={104}*/}
-                            {/*    height={48}*/}
-                            {/*    className="max-h-12 w-full object-contain object-left"*/}
-                            {/*/>*/}
-                            {/*<img*/}
-                            {/*    alt="SavvyCal"*/}
-                            {/*    src="https://tailwindui.com/plus/img/logos/savvycal-logo-white.svg"*/}
-                            {/*    width={140}*/}
-                            {/*    height={48}*/}
-                            {/*    className="max-h-12 w-full object-contain object-left"*/}
-                            {/*/>*/}
-                            {/*<img*/}
-                            {/*    alt="Laravel"*/}
-                            {/*    src="https://tailwindui.com/plus/img/logos/laravel-logo-white.svg"*/}
-                            {/*    width={136}*/}
-                            {/*    height={48}*/}
-                            {/*    className="max-h-12 w-full object-contain object-left"*/}
-                            {/*/>*/}
-                            {/*<img*/}
-                            {/*    alt="Transistor"*/}
-                            {/*    src="https://tailwindui.com/plus/img/logos/transistor-logo-white.svg"*/}
-                            {/*    width={158}*/}
-                            {/*    height={48}*/}
-                            {/*    className="max-h-12 w-full object-contain object-left"*/}
-                            {/*/>*/}
-                            {/*<img*/}
-                            {/*    alt="Statamic"*/}
-                            {/*    src="https://tailwindui.com/plus/img/logos/statamic-logo-white.svg"*/}
-                            {/*    width={147}*/}
-                            {/*    height={48}*/}
-                            {/*    className="max-h-12 w-full object-contain object-left"*/}
-                            {/*/>*/}
                         </div>
                     </div>
                 </div>

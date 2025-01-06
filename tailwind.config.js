@@ -37,6 +37,10 @@ export default {
                 // Blue
                 primary: "#264ba6",
                 'primary-light': "#4D7BCC",
+                
+                //  Darkmoduscolors
+                'dark-primary': "#242424",
+                'dark-secondary': "#333333",
             },
         },
     },
