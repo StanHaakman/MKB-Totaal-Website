@@ -8,7 +8,7 @@ export default function About() {
 
         <FadeInStagger className={"relative w-full"} id={"about-us"}>
             <section className={"flex justify-end items-center flex-col lg:flex-row"}>
-                <div className="row w-full lg:w-7/12 xl:w-1/2 h-auto grow-0 max-h-[33rem] lg:max-h-full overflow-hidden">
+                <div className="row w-full lg:w-4/12 xl:w-1/2 h-auto grow-0 max-h-[33rem] lg:max-h-full overflow-hidden">
                     <FadeIn opacityOnly={true}>
                         <StylizedImage
                             shape={3} // Gebruik de gewenste shape
@@ -20,9 +20,12 @@ export default function About() {
                 </div>
                 
                 <div className="row contents">
-                    <FadeIn className={'mx-auto max-w-md xl:max-w-2xl pb-24 pt-16 px-8'}>
-                        <h2 className="text-3xl font-bold text-gray-900 mb-4">Over Ons</h2>
-                        <p className="text-lg text-gray-700 mb-6">
+                    <FadeIn className={'mx-auto max-w-full lg:max-w-xl pb-12 lg:pb-24 pt-16 px-8'}>
+                        <h2 className="text-base/7 font-semibold text-primary-light">Voor en door ondernemers</h2>
+                        <p className="mt-2 text-pretty text-4xl font-semibold tracking-tight text-gray-800 dark:text-white sm:text-5xl lg:text-balance">
+                            Het kloppende hart van het MKB-Totaal.com
+                        </p>
+                        <p className="text-lg text-gray-700 dark:text-gray-200 mb-6">
                             MKB-Totaal.com is ontstaan vanuit de behoefte in de markt. Wij focussen ons met name op het
                             MKB en zien
                             een grote behoefte aan ondersteuning op het gebied van digitaliseren en automatiseren. Als
@@ -31,14 +34,6 @@ export default function About() {
                             hands-on mee
                             aan oplossingen, bedenken deze en voeren ze ook uit!
                         </p>
-                        <a
-                            href="https://www.teamviewer.com/link"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="text-blue-600 underline hover:text-blue-800"
-                        >
-                            Hebben wij u verzocht om via TeamViewer samen te werken? Klik hier.
-                        </a>
                     </FadeIn>
                 </div>
 

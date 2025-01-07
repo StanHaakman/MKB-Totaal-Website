@@ -31,7 +31,7 @@ export default function Hero() {
                         <FadeIn>
                             <a
                                 href="#services"
-                                className="px-6 py-3 bg-primary hover:bg-primary-light text-white font-semibold rounded-lg shadow-md"
+                                className="px-6 py-3 bg-primary hover:bg-primary-light text-white font-semibold rounded-lg shadow-md duration-200 transition"
                             >
                                 Wat wij doen
                             </a>
@@ -39,7 +39,7 @@ export default function Hero() {
                         <FadeIn>
                             <a
                                 href="#contact"
-                                className="px-6 py-3 bg-transparent border-2 border-white text-white hover:bg-white hover:text-primary font-semibold rounded-lg shadow-md"
+                                className="px-6 py-3 bg-transparent border-2 border-white text-white hover:bg-white hover:text-primary font-semibold rounded-lg shadow-md duration-200 transition"
                             >
                                 Neem Contact Op
                             </a>
@@ -50,10 +50,10 @@ export default function Hero() {
 
             {/* Arrow Down */}
             <div
-                className="absolute bottom-4 md:bottom-10 right-4 md:right-auto md:left-1/2 md:transform md:-translate-x-1/2">
+                className="absolute bottom-4 md:bottom-6 right-4 md:right-auto md:left-1/2 md:transform md:-translate-x-1/2 z-10">
                 <a href={"#services"}
-                   className="flex justify-center items-center w-12 h-12 border-2 border-white rounded-full motion-safe:animate-bounce">
-                    <ArrowDownIcon className="w-6 h-6 text-white"/>
+                   className="flex justify-center items-center w-12 h-12 border-2 border-white rounded-full motion-safe:animate-bounce duration-200 transition hover:bg-white/80 group">
+                    <ArrowDownIcon className="w-6 h-6 text-white group-hover:text-primary duration-200 transition"/>
                 </a>
             </div>
         </div>
