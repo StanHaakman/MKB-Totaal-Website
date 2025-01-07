@@ -101,6 +101,7 @@ export default function Services() {
                                     }
                                 }
                             }
+                            autoplay={{delay: 5000}}
                             pagination={{clickable: true}}
                             modules={[Pagination]}
                             className="!pb-10 show-swiper lg:grid lg:grid-cols-2 lg:gap-x-8 lg:gap-y-12"
