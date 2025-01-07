@@ -28,7 +28,7 @@ export default function Portofolio() {
                 <div
                     className="mx-auto flex max-w-2xl flex-col items-end justify-between gap-16 lg:mx-0 lg:max-w-none lg:flex-row">
                     <div className="w-full lg:max-w-lg lg:flex-auto">
-                        <FadeInStagger faster={true}>
+                        <FadeInStagger faster>
                             <FadeIn>
                                 <h2 className="text-base/7 font-semibold text-primary-light">Samen sterker</h2>
                                 <p className="mt-2 text-pretty text-4xl font-semibold tracking-tight text-gray-800 dark:text-white sm:text-5xl lg:text-balance">

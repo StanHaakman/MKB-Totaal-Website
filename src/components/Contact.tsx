@@ -7,7 +7,7 @@ export default function Contact() {
             {/* Left Column with Primary Background */}
             <div className="flex-1 bg-primary flex justify-center items-center py-16 lg:py-32 px-10 shadow-md shadow-primary-light">
                 <div className="text-white">
-                    <FadeInStagger faster={true}>
+                    <FadeInStagger faster>
                         <FadeIn>
                             <h2 className="text-4xl font-bold tracking-tight text-white sm:text-5xl">
                                 Neem contact op
@@ -73,7 +73,7 @@ export default function Contact() {
             <div className="flex-1 p-8 flex justify-center items-center py-16 lg:py-32 w-full">
                 <div className={"w-full"}>
                     {/* Future content goes here */}
-                    <FadeInStagger faster={true}>
+                    <FadeInStagger faster>
                         <form action="#" method="POST" className="pb-16 pt-6 lg:px-8 lg:py-16 w-full">
                             <div className="mx-auto max-w-xl lg:mr-0 lg:max-w-lg w-full">
                                 <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
