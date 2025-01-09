@@ -86,7 +86,7 @@ export default function Services() {
                 </FadeInStagger>
 
                 <FadeInStagger faster className={"lg:hidden"}>
-                    <div className="mx-auto mt-12 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-4xl px-6">
+                    <div className="mx-auto mt-12 max-w-2xl sm:mt-20 z-10 lg:mt-24 lg:max-w-4xl px-6">
                         
                         <Swiper
                             spaceBetween={16}
