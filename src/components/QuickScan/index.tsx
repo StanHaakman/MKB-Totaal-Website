@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
+import { Swiper as SwiperClass } from "swiper";
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-expect-error
 import "swiper/css";
@@ -34,7 +35,7 @@ export interface QuickScanFormData {
 }
 
 const QuickScan = () => {
-    const [swiperInstance, setSwiperInstance] = useState<typeof Swiper| null>(null);
+    const [swiperInstance, setSwiperInstance] = useState<SwiperClass | null>(null);
     const [activeIndex, setActiveIndex] = useState(0);
 
     // Form state
@@ -69,15 +70,21 @@ const QuickScan = () => {
     ];
 
     const nextStep = () => {
-        if (swiperInstance) swiperInstance.slideNext();
+        if (swiperInstance) {
+            swiperInstance.slideNext();
+        }
     };
 
     const prevStep = () => {
-        if (swiperInstance) swiperInstance.slidePrev();
+        if (swiperInstance) { 
+            swiperInstance.slidePrev();
+        }
     };
 
     const goToStep = (index: number) => {
-        if (swiperInstance) swiperInstance.slideTo(index);
+        if (swiperInstance) {
+            swiperInstance.slideTo(index);
+        }
     };
 
     return (
