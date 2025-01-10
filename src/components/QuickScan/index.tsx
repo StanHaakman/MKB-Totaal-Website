@@ -50,8 +50,8 @@ const QuickScan = () => {
     const [formData, setFormData] = useState<FormData>({
         companyDescription: "",
         employeeCount: "",
-        erpUsage: "",
-        financialIntegration: "",
+        erpUsageDescription: "",
+        financialIntegrationDescription: "",
         accountingSoftware: "",
         internalOrExternalAdmin: "",
         reportingSoftware: "",
@@ -66,7 +66,7 @@ const QuickScan = () => {
         articleNumbering: "",
         onSiteService: "",
         technicianHours: "",
-        technicianMaterials: "",
+        technicianMaterials: ""
     });
 
     const nextStep = () => {

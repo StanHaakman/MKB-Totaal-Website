@@ -75,7 +75,7 @@ export default function Contact() {
                     {/* Future content goes here */}
                     <FadeInStagger faster>
                         <form action="#" method="POST" className="pb-16 pt-6 lg:px-8 lg:py-16 w-full">
-                            <div className="mx-auto max-w-xl lg:mr-0 lg:max-w-lg w-full">
+                            <div className="mx-auto max-w-xl lg:max-w-lg w-full">
                                 <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
                                     <FadeIn className="">
                                         <label htmlFor="first-name" className="block text-sm/6 font-semibold text-primary dark:text-primary-light">Voornaam</label>
