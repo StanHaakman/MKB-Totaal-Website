@@ -10,8 +10,8 @@ import Step_2 from "./Step_2";
 import Step_end from "./Step_end";
 import Navigation from "./Navigation";
 
-// FormData interface
-interface FormData {
+// Rename FormData interface to avoid conflict
+export interface QuickScanFormData {
     companyDescription: string;
     employeeCount: string | number;
     erpUsageDescription: string;
@@ -33,21 +33,12 @@ interface FormData {
     technicianMaterials: string;
 }
 
-
 const QuickScan = () => {
-    const [swiperInstance, setSwiperInstance] = useState<any>(null);
+    const [swiperInstance, setSwiperInstance] = useState<Swiper | null>(null);
     const [activeIndex, setActiveIndex] = useState(0);
 
-    // Steps array
-    const steps = [
-        { name: "Introductie", component: <Step_0 /> },
-        { name: "Algemene vragen", component: <Step_1 /> },
-        { name: "Detailvragen", component: <Step_2 /> },
-        { name: "Bedankt", component: <Step_end /> },
-    ];
-
     // Form state
-    const [formData, setFormData] = useState<FormData>({
+    const [formData, setFormData] = useState<QuickScanFormData>({
         companyDescription: "",
         employeeCount: "",
         erpUsageDescription: "",
@@ -68,6 +59,14 @@ const QuickScan = () => {
         technicianHours: "",
         technicianMaterials: ""
     });
+
+    // Steps array
+    const steps = [
+        { name: "Introductie", component: <Step_0 /> },
+        { name: "Algemene vragen", component: <Step_1 formData={formData} setFormData={setFormData} /> },
+        { name: "Detailvragen", component: <Step_2 formData={formData} setFormData={setFormData} /> },
+        { name: "Bedankt", component: <Step_end /> },
+    ];
 
     const nextStep = () => {
         if (swiperInstance) swiperInstance.slideNext();
@@ -104,7 +103,7 @@ const QuickScan = () => {
                 >
                     {steps.map((step, index) => (
                         <SwiperSlide key={index}>
-                            {React.cloneElement(step.component as React.ReactElement<any>, {
+                            {React.cloneElement(step.component as React.ReactElement, {
                                 formData,
                                 setFormData,
                             })}

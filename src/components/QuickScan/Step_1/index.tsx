@@ -1,17 +1,16 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
+import { Field, Description, Switch, Label, Input, Textarea, Transition } from "@headlessui/react";
+import {QuickScanFormData} from "../index.tsx";
 
-import {Field, Description, Switch, Label, Input, Textarea, Transition} from "@headlessui/react";
-
-interface Step1Props {
-    formData: FormData;
-    setFormData: React.Dispatch<React.SetStateAction<FormData>>;
+interface Step_1Props {
+    formData: QuickScanFormData;
+    setFormData: React.Dispatch<React.SetStateAction<QuickScanFormData>>;
 }
 
+const Step_1: React.FC<Step_1Props> = ({ formData, setFormData }) => {
+    const [erpUsageEnabled, setErpUsageEnabled] = useState(false);
+    const [financialIntegrationEnabled, setFinancialIntegrationEnabled] = useState(false);
 
-const Step_1: React.FC<Step1Props> = ({formData, setFormData}) => {
-    const [erpUsageEnabled, setErpUsageEnabled] = useState(false)
-    const [financialIntegrationEnabled, setFinancialIntegrationEnabled] = useState(false)
-    
     return (
         <div>
             <div className="progress py-4">
@@ -32,7 +31,7 @@ const Step_1: React.FC<Step1Props> = ({formData, setFormData}) => {
                         placeholder={"Welke producten maakt u?"}
                         value={formData.companyDescription}
                         onChange={(e) =>
-                            setFormData({...formData, companyDescription: e.target.value})
+                            setFormData({ ...formData, companyDescription: e.target.value })
                         }
                     />
                 </Field>
@@ -51,7 +50,7 @@ const Step_1: React.FC<Step1Props> = ({formData, setFormData}) => {
                         name={"employeeCount"}
                         value={formData.employeeCount}
                         onChange={(e) =>
-                            setFormData({...formData, employeeCount: e.target.value})
+                            setFormData({ ...formData, employeeCount: e.target.value })
                         }
                     />
                 </Field>
@@ -112,11 +111,11 @@ const Step_1: React.FC<Step1Props> = ({formData, setFormData}) => {
                         <Textarea
                             className="w-full p-2 pt-4 border-2 rounded-md relative text-xs"
                             rows={6}
-                            name={"erpDescription"}
+                            name={"erpUsageDescription"}
                             placeholder={"Welk ERP-systeem gebruikt u?"}
-                            value={formData.erpDescription}
+                            value={formData.erpUsageDescription}
                             onChange={(e) =>
-                                setFormData({...formData, erpDescription: e.target.value})
+                                setFormData({ ...formData, erpUsageDescription: e.target.value })
                             }
                         />
                     </Transition>
@@ -182,14 +181,14 @@ const Step_1: React.FC<Step1Props> = ({formData, setFormData}) => {
                             placeholder={"Met welk boekhoudingssysteem werkt u?"}
                             value={formData.financialIntegrationDescription}
                             onChange={(e) =>
-                                setFormData({...formData, financialIntegrationDescription: e.target.value})
+                                setFormData({ ...formData, financialIntegrationDescription: e.target.value })
                             }
                         />
                     </Transition>
                 </Field>
             </div>
         </div>
-    )
+    );
 };
 
 export default Step_1;
