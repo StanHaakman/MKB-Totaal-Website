@@ -34,7 +34,7 @@ export interface QuickScanFormData {
 }
 
 const QuickScan = () => {
-    const [swiperInstance, setSwiperInstance] = useState<Swiper | null>(null);
+    const [swiperInstance, setSwiperInstance] = useState<typeof Swiper| null>(null);
     const [activeIndex, setActiveIndex] = useState(0);
 
     // Form state
