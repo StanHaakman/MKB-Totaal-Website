@@ -53,18 +53,6 @@ export default function Contact() {
                                     </div>
                                 </div>
                             </FadeIn>
-                            <FadeIn>
-                                <div className="grid grid-cols-2">
-                                    <div>
-                                        <dt className="font-bold text-gray-200">BTW Nummer</dt>
-                                        <dd className="text-white">NL123456789B01</dd>
-                                    </div>
-                                    <div>
-                                        <dt className="font-bold text-gray-200">KvK Nummer</dt>
-                                        <dd className="text-white">12345678</dd>
-                                    </div>
-                                </div>
-                            </FadeIn>
                         </dl>
                     </FadeInStagger>
                 </div>

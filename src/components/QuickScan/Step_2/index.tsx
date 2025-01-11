@@ -12,7 +12,8 @@ const Step_2: React.FC<Step_2Props> = ({ formData, setFormData }) => {
         <div>
             <div className="progress py-4">
                 <h2 className={"text-dark-primary"}>Stap 2 van 3</h2>
-                <h2 className={"font-bold"}>Detailvragen</h2>
+                <h2 className={"font-bold"}>Uw bedrijfsprocessen in detail</h2>
+                <p className={"text-xs text-gray-600"}>Deze stap gaat in op de details van waarde toevoeging, voorraadbeheer, en dienstverlening.</p>
             </div>
             <div className="mb-4 relative">
                 <Field>

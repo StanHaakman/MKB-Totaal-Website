@@ -100,7 +100,7 @@ const QuickScan = () => {
             </div>
 
             {/* Swiper */}
-            <div className="grow max-h-[625px] overflow-y-scroll">
+            <div className="grow">
                 <Swiper
                     onSwiper={setSwiperInstance}
                     onSlideChange={(swiper) => setActiveIndex(swiper.activeIndex)}
@@ -109,7 +109,7 @@ const QuickScan = () => {
                     spaceBetween={50}
                 >
                     {steps.map((step, index) => (
-                        <SwiperSlide key={index}>
+                        <SwiperSlide key={index} className={" max-h-[625px] overflow-y-scroll p-2"}>
                             {React.cloneElement(step.component as React.ReactElement, {
                                 formData,
                                 setFormData,
