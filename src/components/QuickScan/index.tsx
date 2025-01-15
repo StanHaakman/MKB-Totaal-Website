@@ -8,11 +8,17 @@ import "swiper/css";
 import Step_0 from "./Step_0";
 import Step_1 from "./Step_1";
 import Step_2 from "./Step_2";
+import Step_3 from "./Step_3";
 import Step_end from "./Step_end";
 import Navigation from "./Navigation";
 
 // Rename FormData interface to avoid conflict
 export interface QuickScanFormData {
+    companyName: string;
+    contactEmail: string;
+    contactName: string;
+    contactPhone: string;
+    extraInfo: string;
     companyDescription: string;
     employeeCount: string | number;
     erpUsageDescription: string;
@@ -40,6 +46,11 @@ const QuickScan = () => {
 
     // Form state
     const [formData, setFormData] = useState<QuickScanFormData>({
+        companyName: "",
+        contactEmail: "",
+        contactName: "",
+        contactPhone: "",
+        extraInfo: "",
         companyDescription: "",
         employeeCount: "",
         erpUsageDescription: "",
@@ -66,6 +77,7 @@ const QuickScan = () => {
         { name: "Introductie", component: <Step_0 /> },
         { name: "Algemene vragen", component: <Step_1 formData={formData} setFormData={setFormData} /> },
         { name: "Detailvragen", component: <Step_2 formData={formData} setFormData={setFormData} /> },
+        { name: "Bedrijfsgegevens", component: <Step_3 formData={formData} setFormData={setFormData} /> },
         { name: "Bedankt", component: <Step_end /> },
     ];
 
