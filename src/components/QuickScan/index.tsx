@@ -31,6 +31,7 @@ export interface QuickScanFormData {
     employeeHours: string;
     purchaseTracking: string;
     invoiceProcessing: string;
+    invoiceScanning: string;
     inventory: string;
     multipleWarehouses: string;
     fixedLocationStorage: string;
@@ -63,6 +64,7 @@ const QuickScan = () => {
         employeeHours: "",
         purchaseTracking: "",
         invoiceProcessing: "",
+        invoiceScanning: "",
         inventory: "",
         multipleWarehouses: "",
         fixedLocationStorage: "",
@@ -80,6 +82,32 @@ const QuickScan = () => {
         { name: "Bedrijfsgegevens", component: <Step_3 formData={formData} setFormData={setFormData} /> },
         { name: "Bedankt", component: <Step_end /> },
     ];
+    const sendEmail = async () => {
+        const emailData = {
+            recipient: "stan@staal-ai.nl",
+            subject: "Quickscan resultaten",
+            body: JSON.stringify(formData, null, 2),
+        }
+
+        try {
+            const response = await fetch("http://localhost:5173/send-email", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify(emailData),
+            });
+
+            if (response.ok) {
+                alert("E-mail succesvol verzonden!");
+            } else {
+                alert("Fout bij het verzenden van de e-mail.");
+            }
+        } catch (error) {
+            console.error("Error:", error);
+            alert("Er is iets misgegaan.");
+        }
+    }
 
     const nextStep = () => {
         if (swiperInstance) {
@@ -140,7 +168,7 @@ const QuickScan = () => {
                 >
                     Vorige
                 </button>
-                {activeIndex < steps.length - 1 ? (
+                {activeIndex < steps.length - 2 ? (
                     <button
                         onClick={nextStep}
                         className="px-4 py-2 bg-primary text-white rounded hover:bg-primary-light transition-colors duration-200 cursor-pointer"
@@ -149,7 +177,7 @@ const QuickScan = () => {
                     </button>
                 ) : (
                     <button
-                        onClick={() => alert("Quickscan afgerond!")}
+                        onClick={sendEmail}
                         className="px-4 py-2 bg-green-500 text-white rounded"
                     >
                         Afronden

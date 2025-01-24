@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Field, Description, Switch, Label, Input, Textarea, Transition } from "@headlessui/react";
 import {QuickScanFormData} from "../index.tsx";
 import SimpleSwitch from "../SimpleSwitch.tsx";
+import {FadeIn, FadeInStagger} from "../../FadeIn.tsx";
 
 interface Step_1Props {
     formData: QuickScanFormData;
@@ -14,14 +15,14 @@ const Step_1: React.FC<Step_1Props> = ({ formData, setFormData }) => {
     const [administrationInHouseEnabled, setAdministrationInHouseEnabled] = useState(false);
 
     return (
-        <div>
+        <FadeInStagger faster>
             <div className="progress pb-6">
                 <h2 className={"text-dark-primary"}>Stap 1 van 3</h2>
                 <h2 className={"font-bold"}>Vertel ons over uw bedrijf</h2>
                 <p className={"text-xs text-gray-600"}>Deze stap verzamelt algemene informatie over het bedrijf en de
                     huidige processen.</p>
             </div>
-            <div className="mb-4 relative">
+            <FadeIn className="mb-4 relative">
                 <Field>
                     <Label
                         className={"absolute -top-3 left-2 inline-block rounded-lg bg-white px-1 text-sm font-bold text-gray-900 z-10"}
@@ -39,8 +40,8 @@ const Step_1: React.FC<Step_1Props> = ({ formData, setFormData }) => {
                         }
                     />
                 </Field>
-            </div>
-            <div className="mb-4 relative">
+            </FadeIn>
+            <FadeIn className="mb-4 relative">
                 <Field>
                     <Label
                         className={"absolute -top-3 left-2 inline-block rounded-lg bg-white px-1 text-sm font-bold text-gray-900 z-10"}
@@ -60,10 +61,10 @@ const Step_1: React.FC<Step_1Props> = ({ formData, setFormData }) => {
                         }
                     />
                 </Field>
-            </div>
+            </FadeIn>
 
 
-            <div className="mt-4 relative">
+            <FadeIn className="mt-4 relative">
                 <Field className="flex item-center justify-between pr-2 gap-x-3">
                     <span className="flex grow flex-col py-2 pl-2 items-center">
                         <Label className="text-sm font-semibold text-gray-900">
@@ -106,9 +107,9 @@ const Step_1: React.FC<Step_1Props> = ({ formData, setFormData }) => {
                         </Switch>
                     </div>
                 </Field>
-            </div>
+            </FadeIn>
             
-            <div className="mb-4 relative">
+            <FadeIn className="mb-4 relative">
                 <Field className="flex items-center justify-between pr-2 flex-wrap">
                     <span className="flex grow flex-col py-2 pl-2">
                         <Label className="text-sm font-semibold text-gray-900">
@@ -143,9 +144,9 @@ const Step_1: React.FC<Step_1Props> = ({ formData, setFormData }) => {
                         />
                     </Transition>
                 </Field>
-            </div>
+            </FadeIn>
             
-            <div className="mb-4 relative">
+            <FadeIn className="mb-4 relative">
                 <Field className="flex items-center justify-between pr-2 flex-wrap">
                     <span className="flex grow flex-col py-2 pl-2">
                         <Label className="text-sm font-semibold text-gray-900">
@@ -179,9 +180,9 @@ const Step_1: React.FC<Step_1Props> = ({ formData, setFormData }) => {
                         />
                     </Transition>
                 </Field>
-            </div>
+            </FadeIn>
             
-            <div className="mb-4 relative">
+            <FadeIn className="mb-4 relative">
                 <Field>
                     <Label
                         className={"absolute -top-3 left-2 inline-block rounded-lg bg-white px-1 text-sm font-bold text-gray-900 z-10"}
@@ -199,8 +200,8 @@ const Step_1: React.FC<Step_1Props> = ({ formData, setFormData }) => {
                         }
                     />
                 </Field>
-            </div>
-        </div>
+            </FadeIn>
+        </FadeInStagger>
     );
 };
 
